@@ -51,9 +51,9 @@ Atlassian Marketplace. This page will carry the listing links once they are live
 ## One idea, applied twice
 
 Jira's search is the most powerful thing in the product, and it can only see fields.
-Anything that is not a field &mdash; a sprint's schedule, a link to a test &mdash; is
-invisible to JQL, to saved filters, to navigator columns and to CSV export. You end up
-answering by hand questions that Jira could have answered instantly.
+Anything that is not a field &mdash; a sprint's schedule, a link to a test &mdash; can at
+best be dug out with a search: it can never be a navigator column, never be sorted on,
+and never land in a CSV export.
 
 Both apps do the same thing about it: take something Jira already knows, and publish it
 as a real, indexed field.

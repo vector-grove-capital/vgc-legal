@@ -9,8 +9,11 @@ description: Test Coverage adds Test Coverage and Linked Test Count as ordinary 
 
 Your test management app knows which work items have tests. Jira does not.
 
-That gap is why "show me every unfinished story with no test" is a question you answer
-by hand. Test Coverage adds two ordinary, indexed Jira fields to every work item that
+You can go and find out &mdash; open a work item and read its links, and a JQL add-on
+will let you search across them. What none of that gives you is a *field*: coverage is
+never a navigator column, never something you sort on, and never in a CSV export.
+
+Test Coverage adds two ordinary, indexed Jira fields to every work item that
 has links:
 
 - **Test Coverage** &mdash; `Covered` or `Not covered`
