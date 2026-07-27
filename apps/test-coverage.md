@@ -67,8 +67,8 @@ under-reporting it, because it tells someone it is safe to ship.
 If your test management app keeps its test cases in its own store rather than creating
 them as Jira work items, then Jira cannot see those tests and neither can this app: the
 requirement will read `Not covered` even though it is tested. Xray creates Jira work
-items, so it works &mdash; verified on a live Jira site. Other tools differ, and some
-(Zephyr Scale among them) are built the other way. **Check first:** open a covered
+items, so it works &mdash; verified on a live Jira site. Other test management apps
+differ, and some keep their test cases entirely outside Jira. **Check first:** open a covered
 requirement in Jira and look at its links. If the linked tests appear there as work
 items with a type name ending in "Test", this app will count them. If they do not
 appear in Jira at all, it will not.
