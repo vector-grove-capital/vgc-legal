@@ -115,8 +115,12 @@ pre code { background: none; color: inherit; padding: 0; font-size: inherit; }
 
 /* ---------- tables ---------- */
 
-table { border-collapse: collapse; margin: 20px 0; font-size: 15.5px; width: 100%; max-width: var(--measure); }
-th, td { text-align: left; padding: 9px 14px 9px 0; border-bottom: 1px solid var(--rule); vertical-align: top; }
+/* Tables are NOT held to the prose measure: the security page's scope names
+   (read:board-scope:jira-software) wrapped mid-token at 68ch, which reads as a
+   typo in a document whose whole job is to be precise. */
+table { border-collapse: collapse; margin: 20px 0; font-size: 15.5px; width: 100%; max-width: 900px; }
+th, td { text-align: left; padding: 9px 18px 9px 0; border-bottom: 1px solid var(--rule); vertical-align: top; }
+td code, th code { white-space: nowrap; }
 th { font-weight: 650; color: var(--ink-soft); font-size: 13px; text-transform: uppercase; letter-spacing: 0.06em; }
 
 /* ---------- notes ---------- */

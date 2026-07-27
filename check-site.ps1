@@ -113,7 +113,12 @@ Write-Host "== content ==" -ForegroundColor Cyan
 $homeBody = $bodies["$Base/"]
 if ($homeBody) {
     if ($homeBody -match 'Vector Grove') { Pass 'brand on home' } else { Fail 'brand on home' 'the words "Vector Grove" do not appear' }
-    if ($homeBody -match 'vgc-legal/') { Fail 'baseurl leak on home' 'a "/vgc-legal/" path is still being emitted' } else { Pass 'no baseurl leak on home' }
+    # Must match the leak in PATH position only. A bare 'vgc-legal/' also matches
+    # the perfectly good github.com/vector-grove-capital/vgc-legal/issues link,
+    # which is how this check first reported a failure that did not exist.
+    $leak = [regex]::Matches($homeBody, '(?:href|src)="(?:https://apps\.vectorgrovecapital\.com)?/vgc-legal/[^"]*')
+    if ($leak.Count) { Fail 'baseurl leak on home' ("{0} link(s) still emitted under /vgc-legal/: {1}" -f $leak.Count, ($leak[0].Value)) }
+    else { Pass 'no baseurl leak on home' 'no href/src resolves under /vgc-legal/' }
 }
 foreach ($legal in @("$Base/privacy-policy", "$Base/eula")) {
     $b = $bodies[$legal]
@@ -131,6 +136,18 @@ if ($SelfTest) {
         Pass 'self-test' 'dead links are detectable'
     }
     if ($script:failures.Count -ne $before) { Write-Host '  (self-test itself recorded a failure)' -ForegroundColor Red }
+
+    # The baseurl guard was tightened after it fired on a good link. Tightening a
+    # guard until it stops complaining is how guards become decoration, so both
+    # directions are exercised here against fixtures.
+    $rx  = '(?:href|src)="(?:https://apps\.vectorgrovecapital\.com)?/vgc-legal/[^"]*'
+    $bad = 'x <a href="/vgc-legal/privacy-policy.html">Privacy</a> <link href="/vgc-legal/assets/css/style.css">'
+    $ok  = 'x <a href="https://github.com/vector-grove-capital/vgc-legal/issues">issues</a> <a href="/privacy-policy">P</a>'
+    $nBad = [regex]::Matches($bad, $rx).Count
+    $nOk  = [regex]::Matches($ok,  $rx).Count
+    Write-Host ("  the shipped-broken markup matches {0} time(s); the good markup matches {1} time(s)" -f $nBad, $nOk)
+    if ($nBad -ge 2 -and $nOk -eq 0) { Pass 'baseurl guard discriminates' 'catches the real leak, ignores the tracker URL' }
+    else { Fail 'baseurl guard discriminates' ("expected >=2 and 0, got {0} and {1}" -f $nBad, $nOk) }
 }
 
 Write-Host ''
