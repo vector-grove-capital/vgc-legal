@@ -3,7 +3,7 @@ layout: default
 permalink: /apps/test-coverage/
 title: Test Coverage for Jira
 heading: Test Coverage for Jira
-standfirst: Linked test count and coverage status as real, searchable Jira fields. Works alongside Xray, Zephyr, and any team convention that ends in "Test".
+standfirst: Linked test count and coverage status as real, searchable Jira fields. Counts any linked work item whose type name ends in "Test" &mdash; Xray's, or your own.
 description: Test Coverage adds Test Coverage and Linked Test Count as ordinary indexed Jira fields, computed from the Jira issue graph rather than a vendor backend.
 ---
 
@@ -53,19 +53,29 @@ they have not been verified.
   installed from a development environment; it does not appear on a Marketplace install.</figcaption>
 </figure>
 
-## Works with your test management app &mdash; and after it
+## Which tests it counts, and which it cannot see
 
 Coverage is computed from the Jira issue graph. Any linked work item whose **type** name
-ends in "Test" counts: Xray's `Xray Test`, Zephyr's tests, and a team's own
-`Manual Test` all qualify, in either link direction, whatever the link type is called.
+ends in "Test" counts &mdash; Xray's `Xray Test`, or a team's own `Manual Test` &mdash;
+in either link direction, whatever the link type is called.
 
 It deliberately does **not** count `Test Set`, `Test Plan`, `Test Execution`,
 `Sub Test Execution` or `Precondition`. Over-reporting coverage is worse than
 under-reporting it, because it tells someone it is safe to ship.
 
+**That rule is the whole product, and it has an edge worth knowing before you buy.**
+If your test management app keeps its test cases in its own store rather than creating
+them as Jira work items, then Jira cannot see those tests and neither can this app: the
+requirement will read `Not covered` even though it is tested. Xray creates Jira work
+items, so it works &mdash; verified on a live Jira site. Other tools differ, and some
+(Zephyr Scale among them) are built the other way. **Check first:** open a covered
+requirement in Jira and look at its links. If the linked tests appear there as work
+items with a type name ending in "Test", this app will count them. If they do not
+appear in Jira at all, it will not.
+
 Because it reads Jira rather than a vendor's backend, it keeps working if you migrate
-between test management apps, or stop using one entirely. Your Test work items stay in
-Jira, so your coverage fields stay correct.
+between test management apps, or stop using one entirely &mdash; as long as your tests
+are Jira work items, they stay in Jira, and so do your coverage fields.
 
 ## What it does not do
 
