@@ -7,7 +7,9 @@
 <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
 <link rel="canonical" href="{{ page.url | absolute_url }}">
 <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
-<link rel="icon" href="{{ '/assets/logo.svg' | relative_url }}" type="image/svg+xml">
+<!-- No favicon until there is a real mark. It pointed at the placeholder square,
+     which put an invented logo in every browser tab. Restore this line once
+     assets/logo.svg is the actual Vector Grove mark. -->
 </head>
 <body>
 {% include nav.html %}

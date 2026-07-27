@@ -118,6 +118,19 @@ pre code { background: none; color: inherit; padding: 0; font-size: inherit; }
 /* Tables are NOT held to the prose measure: the security page's scope names
    (read:board-scope:jira-software) wrapped mid-token at 68ch, which reads as a
    typo in a document whose whole job is to be precise. */
+/* Product screenshots. These are 1840x900 captures of the real product, so they
+   scale to the column rather than forcing the page wide. The border is not
+   decoration: Jira's UI is white on a near-white page and without an edge the
+   screenshot bleeds into the article. */
+figure.shot { margin: 30px 0; max-width: 100%; }
+figure.shot img {
+  display: block; width: 100%; height: auto;
+  border: 1px solid var(--rule); border-radius: 6px; background: #fff;
+}
+figure.shot figcaption {
+  font-size: 14.5px; color: var(--ink-soft); margin-top: 10px; max-width: var(--measure);
+}
+
 table { border-collapse: collapse; margin: 20px 0; font-size: 15.5px; width: 100%; max-width: 900px; }
 th, td { text-align: left; padding: 9px 18px 9px 0; border-bottom: 1px solid var(--rule); vertical-align: top; }
 td code, th code { white-space: nowrap; }

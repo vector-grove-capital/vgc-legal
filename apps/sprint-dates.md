@@ -19,6 +19,15 @@ so they behave like any other date field in the product.
 ORDER BY "Sprint Start Date" ASC
 ```
 
+<figure class="shot">
+  <img src="{{ '/assets/img/sprint-dates-search.png' | relative_url }}"
+       alt="Jira work item search showing a JQL date range query on Sprint End Date, with Sprint Start Date and Sprint End Date as sorted columns."
+       width="1840" height="900" loading="lazy">
+  <figcaption>Both fields as ordinary navigator columns, ordered by sprint start date. The
+  work item keys run 16, 14, 13, 11, 10, 9 and then jump to 25 &mdash; the rows are in
+  field order, not key order.</figcaption>
+</figure>
+
 ## Where the fields work
 
 | Surface | Supported |
@@ -32,6 +41,15 @@ ORDER BY "Sprint Start Date" ASC
 
 Board columns and dashboard gadgets are not claimed. They may well work; we have not
 verified them, and this site does not state anything we have not watched happen.
+
+<figure class="shot">
+  <img src="{{ '/assets/img/sprint-dates-work-item.png' | relative_url }}"
+       alt="A Jira work item with the Sprint Dates panel in the context column, showing the sprint name, its start and end dates, and an example JQL query."
+       width="1840" height="900" loading="lazy">
+  <figcaption>On the work item itself, in the context column. The <code>DEV</code> badge is
+  Jira marking an app installed from a development environment; it does not appear on a
+  Marketplace install.</figcaption>
+</figure>
 
 ## How the fields stay correct
 

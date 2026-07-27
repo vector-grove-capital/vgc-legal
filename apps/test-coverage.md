@@ -22,6 +22,14 @@ has links:
 ORDER BY "Linked Test Count" DESC
 ```
 
+<figure class="shot">
+  <img src="{{ '/assets/img/test-coverage-search.png' | relative_url }}"
+       alt="Jira work item search with Test Coverage and Linked Test Count as columns, sorted by linked test count descending, showing Covered and Not covered values."
+       width="1840" height="900" loading="lazy">
+  <figcaption>Coverage status and linked test count as navigator columns, sorted by count.
+  Both are ordinary indexed fields, so the sort is on the value.</figcaption>
+</figure>
+
 ## Where the fields work
 
 | Surface | Supported |

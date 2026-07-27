@@ -1,4 +1,4 @@
-# apps.vectorgrovecapital.com
+﻿# apps.vectorgrovecapital.com
 
 The Vector Grove developer site: the two Atlassian Marketplace apps, the security
 posture, support policy, and the legal documents a Marketplace partner must publish.
@@ -14,7 +14,7 @@ _layouts/default.html  the only layout
 _includes/nav.html     masthead, shared by every page
 _includes/footer.html  footer, shared by every page
 assets/css/site.css    hand-written, no framework, no build step
-assets/logo.svg        PLACEHOLDER mark -- swap this one file to change it everywhere
+assets/img/            product screenshots used on the two app pages
 index.md               home
 apps/*.md              one page per app
 security.md            scopes and stored data, per app
