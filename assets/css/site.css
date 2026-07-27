@@ -106,10 +106,16 @@ li { margin: 4px 0; }
 
 pre, code { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace; }
 code { font-size: 0.9em; background: var(--paper-alt); padding: 1px 5px; border-radius: 4px; }
+/* Code is NOT held to the prose measure, for the same reason the tables below
+   are not. The JQL examples are the most load-bearing content on both app pages
+   and the longest runs to about 72 characters; at the 68ch prose measure they
+   overflowed, and overflow-x meant a reader had to scroll sideways to find out
+   what the app does. Widened to the table width so they simply fit. overflow-x
+   stays as the backstop for a narrow viewport. */
 pre {
   background: var(--code-bg); color: var(--code-ink); padding: 16px 20px;
   border-radius: 8px; overflow-x: auto; font-size: 14.5px; line-height: 1.55;
-  max-width: var(--measure);
+  max-width: 900px;
 }
 pre code { background: none; color: inherit; padding: 0; font-size: inherit; }
 
