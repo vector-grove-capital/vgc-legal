@@ -68,7 +68,7 @@ work: JQL, saved filters, navigator columns and sorting, and CSV export.
 
 ## Why "runs on Atlassian" matters
 
-Most apps that add fields to Jira call out to a vendor's servers to do it. That means
+Many Jira apps that add fields do that work on the vendor's own servers. When they do,
 your issue data leaves Atlassian, sits in someone else's database, and your security
 review has to account for it.
 
