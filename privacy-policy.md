@@ -10,13 +10,13 @@ description: What the Vector Grove Jira apps access, store and transmit. Written
 **Provider:** Vector Grove Capital LLC
 **Applies to:** Sprint Dates for Jira, Test Coverage for Jira
 
-This policy describes what the Sprint Dates for Jira app ("the App") accesses,
-stores, and transmits. It is written from the App's actual behaviour, not from a
-template.
+This policy describes what Sprint Dates for Jira and Test Coverage for Jira
+("the Apps") access, store, and transmit. It is written from the Apps' actual
+behaviour, not from a template.
 
 ## Summary
 
-The App runs entirely on Atlassian's Forge platform. **No data leaves Atlassian
+Both Apps run entirely on Atlassian's Forge platform. **No data leaves Atlassian
 infrastructure.** There are no external servers, no third-party services, and no
 analytics. The provider cannot see your data.
 
@@ -46,7 +46,7 @@ In Atlassian-hosted app storage, within your Atlassian site's data residency:
 
 - **Field ids** for each App's own fields, cached to avoid repeated lookups
 - **Sprint id → last-seen start and end date** (Sprint Dates only), used to detect
-  schedule changes so the App rewrites only sprints that actually moved
+  schedule changes so Sprint Dates rewrites only sprints that actually moved
 - **A progress cursor** for sprints large enough to process across several runs
 
 No work item content, no user identities, and no personal data are stored.
