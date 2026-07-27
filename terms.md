@@ -44,9 +44,10 @@ The content, layout and code of this site are owned by Vector Grove Capital LLC.
 quote or link to it with attribution. You may not present it as your own.
 
 Jira, Atlassian, Forge and Atlassian Marketplace are trademarks of Atlassian Pty Ltd.
-Xray is a trademark of Xblend/Xpand IT; Zephyr and Zephyr Scale are trademarks of
-SmartBear. Referring to them here describes how our software does or does not
-interoperate with them, and implies no endorsement, affiliation or partnership.
+
+Any other product name used on this site is a trademark of its owner, and is attributed
+on the page that names it. Naming one describes how our software does or does not
+interoperate with it, and implies no endorsement, affiliation or partnership.
 
 ## No warranty for this site
 

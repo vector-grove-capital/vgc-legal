@@ -80,6 +80,11 @@ Because it reads Jira rather than a vendor's backend, it keeps working if you mi
 between test management apps, or stop using one entirely &mdash; as long as your tests
 are Jira work items, they stay in Jira, and so do your coverage fields.
 
+Xray is a trademark of Xblend/Xpand IT. It is named here because this is the one test
+management app we have installed and measured, and naming it describes how this app does
+or does not interoperate with it &mdash; no endorsement, affiliation or partnership is
+implied.
+
 ## What it does not do
 
 Stated plainly, because a surprise here would earn a one-star review.
