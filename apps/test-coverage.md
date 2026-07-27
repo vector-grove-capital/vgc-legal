@@ -44,6 +44,15 @@ ORDER BY "Linked Test Count" DESC
 Board columns and dashboard gadgets are not claimed here either, for the same reason:
 they have not been verified.
 
+<figure class="shot">
+  <img src="{{ '/assets/img/test-coverage-work-item.png' | relative_url }}"
+       alt="A Jira work item showing the Test Coverage panel in the context column, reading COVERED with two linked Test work items, beside the linked tests themselves."
+       width="1840" height="900" loading="lazy">
+  <figcaption>On the work item: coverage status, the number of linked tests, and the tests
+  themselves in the links section. The <code>DEV</code> badge is Jira marking an app
+  installed from a development environment; it does not appear on a Marketplace install.</figcaption>
+</figure>
+
 ## Works with your test management app &mdash; and after it
 
 Coverage is computed from the Jira issue graph. Any linked work item whose **type** name
