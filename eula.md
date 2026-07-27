@@ -1,5 +1,7 @@
 ---
+layout: default
 title: End User Licence Agreement
+description: Licence terms for the Atlassian Marketplace apps published by Vector Grove Capital LLC.
 ---
 
 # End User Licence Agreement
@@ -25,7 +27,7 @@ Apps, except where such restriction is prohibited by applicable law.
 
 The Apps run on Atlassian's Forge platform and operate entirely within Atlassian
 infrastructure. We do not receive, transmit, or store your data on our own systems.
-See the [Privacy Policy](privacy-policy.md) for specifics on what each App reads,
+See the [Privacy Policy](/privacy-policy) for specifics on what each App reads,
 writes, and stores.
 
 ## 4. Billing
@@ -36,9 +38,10 @@ payment details.
 
 ## 5. Support
 
-Support is provided through our public issue tracker, linked from the
-[README](README.md). We aim to respond within two business days. Support is
-provided in English.
+Support is provided through our public
+[issue tracker](https://github.com/vector-grove-capital/vgc-legal/issues); see the
+[support page](/support/) for scope and response targets. We aim to respond within two
+business days. Support is provided in English.
 
 ## 6. Warranty
 
@@ -79,4 +82,4 @@ without regard to its conflict of law provisions.
 ## Contact
 
 Vector Grove Capital LLC — via our
-[issue tracker](https://github.com/dentwon/vgc-legal/issues).
+[issue tracker](https://github.com/vector-grove-capital/vgc-legal/issues).

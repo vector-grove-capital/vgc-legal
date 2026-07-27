@@ -1,5 +1,7 @@
 ---
+layout: default
 title: Privacy Policy
+description: What the Vector Grove Jira apps access, store and transmit. Written from the apps' actual behaviour, not from a template.
 ---
 
 # Privacy Policy
@@ -75,4 +77,4 @@ Marketplace listings.
 ## Contact
 
 Vector Grove Capital LLC — please
-[open an issue](https://github.com/dentwon/vgc-legal/issues).
+[open an issue](https://github.com/vector-grove-capital/vgc-legal/issues).

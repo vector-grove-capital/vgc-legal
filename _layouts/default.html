@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if page.title %}{{ page.title }} &middot; {{ site.title }}{% else %}{{ site.title }} &middot; {{ site.tagline }}{% endif %}</title>
+<meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+<link rel="canonical" href="{{ page.url | absolute_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+<link rel="icon" href="{{ '/assets/logo.svg' | relative_url }}" type="image/svg+xml">
+</head>
+<body>
+{% include nav.html %}
+
+<main class="wrap">
+{% if page.heading %}
+  <header class="page-head">
+    <h1>{{ page.heading }}</h1>
+    {% if page.standfirst %}<p class="standfirst">{{ page.standfirst }}</p>{% endif %}
+  </header>
+{% endif %}
+{{ content }}
+</main>
+
+{% include footer.html %}
+</body>
+</html>

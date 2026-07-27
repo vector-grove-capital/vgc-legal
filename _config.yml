@@ -1,0 +1,29 @@
+title: Vector Grove
+tagline: Jira apps that run entirely on Atlassian
+description: >-
+  Vector Grove builds focused Jira apps on Atlassian's Forge platform.
+  No external servers, no third-party API keys, no data leaving Atlassian
+  infrastructure.
+
+# The site is served at the apex of a custom domain, NOT at /<repo>/.
+# Without these two keys Jekyll inherits baseurl "/vgc-legal" from the repo
+# metadata and every internal link and the stylesheet 404s. That is exactly
+# what happened on the live site until 2026-07-26.
+url: https://apps.vectorgrovecapital.com
+baseurl: ""
+
+# Hand-written layouts, deliberately no theme gem: GitHub Pages builds this
+# server-side, so anything needing local Ruby/npm is a failure mode no
+# unattended session can debug.
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+github_issues: https://github.com/vector-grove-capital/vgc-legal/issues
+
+exclude:
+  - README.md
+  - check-site.ps1
+  - Gemfile
+  - Gemfile.lock
