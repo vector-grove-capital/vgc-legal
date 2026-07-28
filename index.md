@@ -80,10 +80,14 @@ stops data from leaving.
 
 ## Pricing
 
-Both apps are **free on Jira sites of 10 users or fewer**. That is Atlassian's rule for
-Marketplace apps, not a trial. Above that, each is priced per user per month with the
-rate falling as your site grows; the current rates are shown on the Marketplace listing,
-which is the only place they are ever binding.
+**Neither app is on the Atlassian Marketplace yet**, so there is nothing to buy today and
+no rate is binding anywhere &mdash; see Marketplace status above. What follows is what the
+pricing will be when they list.
+
+Both apps will be **free on Jira sites of 10 users or fewer**. That is Atlassian's rule for
+Marketplace apps, not a trial. Above that, each will be priced per user per month with the
+rate falling as your site grows; the rates will be shown on the Marketplace listing, which
+is the only place they are ever binding.
 
 ## Support
 

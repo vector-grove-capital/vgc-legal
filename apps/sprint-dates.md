@@ -83,9 +83,12 @@ Full detail on the [security and data page]({{ '/security/' | relative_url }}).
 
 ## Pricing
 
+**This app is not on the Atlassian Marketplace yet**, so there is nothing to buy today and
+no rate is binding anywhere. What follows is what the pricing will be when it lists.
+
 Free on Jira sites of 10 users or fewer, per Atlassian's Marketplace rules. Above that,
-per user per month, with the rate falling as the site grows. The Marketplace listing
-carries the binding rates.
+per user per month, with the rate falling as the site grows. The Marketplace listing will
+carry the binding rates, and this page will link to it once it is live.
 
 ## Support
 
